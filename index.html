@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      .myHeading {
+        color: red;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div onclick="makeItClickable()">
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </div>
+    <input
+      type="text"
+      placeholder="change title text here"
+      onchange="changeTitle(event)"
+    />
+    <button onclick="addClassToTitle()">addClassToTitle</button>
+    <input
+      type="text"
+      placeholder="changePcontent"
+      oninput="changePcontent(event)"
+    />
+    <input
+      type="text"
+      placeholder="addToTheSecond"
+      onchange="addToTheSecond(event)"
+    />
+    <button onclick="addParagraph()">addParagraph</button>
+    <button onclick="firstUlDisappear()">firstUlDisappear</button>
+    <div>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a href="https://epicode.it">This link goes to Epicode</a>
+
+      <div id="first-div">
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+          onchange="changeSubtitle(event)"
+        />
+      </div>
+    </div>
+
+    <div id="second-div">
+      <p>And this text is just for the exercise too!</p>
+      <h2 style="color: red" id="footer" onclick="changeFooterText()">
+        Save this page on your computer and open it with VSCode to get the
+        questions!
+      </h2>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
