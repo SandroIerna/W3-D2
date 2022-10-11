@@ -15,24 +15,7 @@
       <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
-    <input
-      type="text"
-      placeholder="change title text here"
-      onchange="changeTitle(event)"
-    />
-    <button onclick="addClassToTitle()">addClassToTitle</button>
-    <input
-      type="text"
-      placeholder="changePcontent"
-      oninput="changePcontent(event)"
-    />
-    <input
-      type="text"
-      placeholder="addToTheSecond"
-      onchange="addToTheSecond(event)"
-    />
-    <button onclick="addParagraph()">addParagraph</button>
-    <button onclick="firstUlDisappear()">firstUlDisappear</button>
+
     <div>
       <hr />
 
@@ -50,7 +33,7 @@
 
       <a href="https://epicode.it">This link goes to Epicode</a>
 
-      <div id="first-div">
+      <div>
         <p>This text is just for the exercise</p>
       </div>
 
@@ -64,13 +47,32 @@
       </div>
     </div>
 
-    <div id="second-div">
+    <div>
       <p>And this text is just for the exercise too!</p>
       <h2 style="color: red" id="footer" onclick="changeFooterText()">
         Save this page on your computer and open it with VSCode to get the
         questions!
       </h2>
     </div>
+    <input
+      type="text"
+      placeholder="change title text here"
+      onchange="changeTitle(event)"
+    />
+    <button onclick="addClassToTitle()">addClassToTitle</button>
+    <input
+      type="text"
+      placeholder="changePcontent"
+      oninput="changePcontent(event)"
+    />
+    <button onclick="changeUrls()">Change URL</button>
+    <input
+      type="text"
+      placeholder="addToTheSecond"
+      onchange="addToTheSecond(event)"
+    />
+    <button onclick="addParagraph()">addParagraph</button>
+    <button onclick="firstUlDisappear()">firstUlDisappear</button>
     <script src="/index.js"></script>
   </body>
 </html>

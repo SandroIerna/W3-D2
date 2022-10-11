@@ -8,6 +8,10 @@ const changeTitle = function (event) {
   const input = event.target;
   h1.innerText = input.value;
 };
+const changeTitleConsole = function (newTitle) {
+  let h1 = document.querySelector("h1");
+  h1.innerText = newTitle;
+};
 
 /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
@@ -36,10 +40,13 @@ const changePcontent = function (event) {
        Write a function for changing the href property of every link to https://www.google.com
       */
 
-// const changeUrls = function () {
-//   let newLink = document.getElementById("https://epicode.it");
-//   yourElement.setAttribute("href", "https://www.google.com");
-// };
+const changeUrls = function () {
+  let newLink = document.querySelectorAll("a");
+  for (let i = 0; i < newLink.length; i++) {
+    newLink[i].href = "https://www.google.com";
+    newLink[i].innerText = "This link goes to google";
+  }
+};
 
 /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.
@@ -58,7 +65,7 @@ const addToTheSecond = function (event) {
       */
 
 const addParagraph = function (content) {
-  const firstDiv = document.getElementById("first-div");
+  const firstDiv = document.querySelectorAll("div")[2];
   console.log(firstDiv);
   const newP = document.createElement("p");
   newP.innerText = "new paragraph";
@@ -72,35 +79,32 @@ const addParagraph = function (content) {
 const firstUlDisappear = function () {
   const firstUl = document.getElementById("firstList");
   firstUl.classList.toggle("hidden");
-  //   console.log(firstUl);
 };
 
 /* EXERCISE 8
        Write a function for making the background of every unordered list green.
       */
 
-// const paintItGreen = function () {
-//   const ul = document.getElementsByTagName("ul");
-//   //   console.log(ul);
-//   for (let i = 0; i < ul; i++) {
-//     console.log(ul[i]);
-//     ul[i].style.backgroundColor = "green";
-//   }
-// };
+const paintItGreen = function () {
+  const ul = document.querySelectorAll("ul");
+  console.log(ul);
+  for (let i = 0; i < ul.length; i++) {
+    console.log(ul[i]);
+    ul[i].style.background = "green";
+  }
+};
 
 /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
       */
-const color = function () {
-  let red = Math.floor(Math.random() * 255);
-  let green = Math.floor(Math.random() * 255);
-  let blue = Math.floor(Math.random() * 255);
-  let rGB = "rgb(" + red + ", " + green + ", " + blue + ")";
-  return rGB;
-};
+
 const makeItClickable = function () {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let rGB = "rgb(" + red + ", " + green + ", " + blue + ")";
   let heading = document.querySelector("div");
-  heading.style.color = color();
+  heading.style.color = rGB;
 };
 
 /* EXERCISE 10
